@@ -1,0 +1,7 @@
+
+box: node
+build:
+  steps:
+    - npm-install
+    - npm-build
+    - turistforeningen/npm-publish
