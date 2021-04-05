@@ -1,10 +1,9 @@
 language: node_js
 node_js:
   - 13
-jobs:
-  install:
-    - npm install
-  build:
-    - npm build
-  publish:
-    - npm publish
+
+install:
+  - npm install
+script:
+  - npm build
+  - npm publish
