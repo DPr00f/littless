@@ -1,5 +1,10 @@
-box: node:latest
-build:
-  steps:
-    - npm-install
-    - turistforeningen/npm-publish
+language: node_js
+node_js:
+  - 13
+jobs:
+  install:
+    - npm install
+  build:
+    - npm build
+  publish:
+    - npm publish
