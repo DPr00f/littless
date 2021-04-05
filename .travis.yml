@@ -11,4 +11,4 @@ script:
   - git add .
   - git stash
   - npm version patch -m "Bumping version %s [ci skip]"
-  - git push --tags
+  - git push
