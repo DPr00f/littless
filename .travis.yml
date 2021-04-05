@@ -7,6 +7,7 @@ install:
 script:
   - npm build
   - npm publish
+  - git remote set-url origin https://dpr00f:$GITHUB_TOKEN@github.com/DPr00f/littless.git
   - git add .
   - git stash
   - npm version patch -m "Bumping version %s [ci skip]"
