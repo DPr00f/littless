@@ -6,11 +6,17 @@ steps:
   image: node:13
   commands:
   - npm install
+  environment:
+    NPM_TOKEN:
+      from_secret: npmtoken
 
 - name: build
   image: node:13
   commands:
   - npm build
+  environment:
+    NPM_TOKEN:
+      from_secret: npmtoken
   depends_on:
   - install
 
