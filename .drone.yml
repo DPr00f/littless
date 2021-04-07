@@ -17,7 +17,7 @@ steps:
 - name: deploy-prod
   image: node:13
   commands:
-  - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> .npmrc
+  - echo "\/\/registry.npmjs.org\/:_authToken=\${NPM_TOKEN}" >> .npmrc
   - npm publish
   - git remote set-url origin https://dpr00f:$GITHUB_TOKEN@github.com/DPr00f/littless.git
   - git add .
